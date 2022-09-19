@@ -8,4 +8,5 @@ module.exports = {
   addWebpackPlugins: require('./addWebpackPlugins'),
   addSplitChunks: require('./addSplitChunks'),
   addFixImport: require('./addFixImports'),
+  addBabelPlugins: require('./addBabelPlugins'),
 };

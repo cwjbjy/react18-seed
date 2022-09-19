@@ -7,6 +7,7 @@ const {
   addWebpackPlugins,
   addSplitChunks,
   addFixImport,
+  addBabelPlugins,
 } = require("./configs");
 
 module.exports = {
@@ -16,6 +17,7 @@ module.exports = {
     ...addLessConfig(),
     ...addWebpackPlugins(),
     ...addSplitChunks(),
-    ...addFixImport()
+    ...addFixImport(),
+    ...addBabelPlugins()
   ),
 };
