@@ -1,6 +1,7 @@
 import { Button, Popover } from "antd";
 import styles from "./index.module.less";
 import { cube } from "./math.js";
+import {isNaN,isNull,join} from 'lodash'
 
 const content = (
   <div>
@@ -10,7 +11,10 @@ const content = (
 );
 
 const App = () => {
-  console.log(cube(5));
+  console.log(isNaN(NaN));
+  console.log(isNull(NaN));
+  console.log(join(['a', 'b', 'c'], '~'));
+  
   return (
     <Popover
       content={content}

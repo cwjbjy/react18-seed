@@ -6,4 +6,6 @@ module.exports = {
   addLessConfig: require('./addLessConfig'),
   addCustomize:require('./addCustomize'),
   addWebpackPlugins: require('./addWebpackPlugins'),
+  addSplitChunks: require('./addSplitChunks'),
+  addFixImport: require('./addFixImports'),
 };

@@ -5,6 +5,8 @@ const {
   addLessConfig,
   addCustomize,
   addWebpackPlugins,
+  addSplitChunks,
+  addFixImport,
 } = require("./configs");
 
 module.exports = {
@@ -12,6 +14,8 @@ module.exports = {
     addCustomize(),
     ...addAlias(),
     ...addLessConfig(),
-    ...addWebpackPlugins()
+    ...addWebpackPlugins(),
+    ...addSplitChunks(),
+    ...addFixImport()
   ),
 };

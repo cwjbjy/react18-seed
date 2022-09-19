@@ -8,8 +8,6 @@ const { __DEV__ } = require('./util');
 
 const options = minimist(process.argv.slice(2));
 
-console.log('options',options)
-
 const addWebpackPlugins = () => {
   const configs = [
     addWebpackPlugin(
