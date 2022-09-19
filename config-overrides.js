@@ -1,7 +1,7 @@
 const { override } = require("customize-cra");
 
-const { addAlias } = require("./configs");
+const { addAlias, addLessConfig } = require("./configs");
 
 module.exports = {
-  webpack: override(...addAlias()),
+  webpack: override(...addAlias(), ...addLessConfig()),
 };

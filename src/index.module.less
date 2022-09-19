@@ -1,0 +1,21 @@
+@width: 10px;
+@height: @width + 10px;
+
+.header {
+  width: @width;
+  height: @height;
+  background-color: aliceblue;
+}
+
+.judicialPopoverWrapper {
+  :global {
+    .ant-popover-inner-content {
+      padding: 8px;
+      font-size: 12px;
+      text-align: left;
+      color: #434343;
+      line-height: 18px;
+      width: 184px;
+    }
+  }
+}
