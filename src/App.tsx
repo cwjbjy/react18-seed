@@ -1,30 +1,33 @@
-import { Button, Popover } from "antd";
+import { useRef, useEffect } from "react";
 import styles from "./index.module.less";
-import {isNaN,isNull,join} from 'lodash'
-import './getData'
 
-const content = (
-  <div>
-    <p>Content</p>
-    <p>Content</p>
-  </div>
-);
+const option = {
+  xAxis: {
+    type: "category",
+    data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+  },
+  yAxis: {
+    type: "value",
+  },
+  series: [
+    {
+      data: [820, 932, 901, 934, 1290, 1330, 1320],
+      type: "line",
+    },
+  ],
+};
 
 const App = () => {
-  console.log(isNaN(NaN));
-  console.log(isNull(NaN));
-  console.log(join(['a', 'b', 'c'], '~'));
-  console.log(process.env.REACT_APP_IMG_URL )
-  return (
-    <Popover
-      content={content}
-      title="Title"
-      overlayClassName={styles.judicialPopoverWrapper}
-      trigger="click"
-    >
-      <Button type="primary">Hover me</Button>
-    </Popover>
-  );
+  const domRef = useRef(null);
+
+  useEffect(() => {
+    if (domRef.current) {
+      let myChart = window.echarts.init(domRef.current);
+      myChart.setOption(option)
+    }
+  }, []);
+
+  return <div className={styles.content} ref={domRef}></div>;
 };
 
 export default App;

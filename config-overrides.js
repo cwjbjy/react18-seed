@@ -9,6 +9,7 @@ const {
   addFixImport,
   addBabelPlugins,
   addProxy,
+  addExternals,
 } = require("./configs");
 
 module.exports = {
@@ -19,7 +20,8 @@ module.exports = {
     ...addWebpackPlugins(),
     ...addSplitChunks(),
     ...addFixImport(),
-    ...addBabelPlugins()
+    ...addBabelPlugins(),
+    ...addExternals()
   ),
   devServer: overrideDevServer(addProxy()),
 };

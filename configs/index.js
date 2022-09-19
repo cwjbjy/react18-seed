@@ -10,4 +10,5 @@ module.exports = {
   addFixImport: require('./addFixImports'),
   addBabelPlugins: require('./addBabelPlugins'),
   addProxy: require('./addProxy'),
+  addExternals:require('./addWebpackExternals')
 };
