@@ -2,6 +2,7 @@ import { Button, Popover } from "antd";
 import styles from "./index.module.less";
 import { cube } from "./math.js";
 import {isNaN,isNull,join} from 'lodash'
+import './getData'
 
 const content = (
   <div>

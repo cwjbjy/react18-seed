@@ -1,4 +1,4 @@
-const { override } = require("customize-cra");
+const { override,overrideDevServer } = require("customize-cra");
 
 const {
   addAlias,
@@ -8,6 +8,7 @@ const {
   addSplitChunks,
   addFixImport,
   addBabelPlugins,
+  addProxy,
 } = require("./configs");
 
 module.exports = {
@@ -20,4 +21,5 @@ module.exports = {
     ...addFixImport(),
     ...addBabelPlugins()
   ),
+  devServer: overrideDevServer(addProxy()),
 };

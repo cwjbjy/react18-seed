@@ -9,4 +9,5 @@ module.exports = {
   addSplitChunks: require('./addSplitChunks'),
   addFixImport: require('./addFixImports'),
   addBabelPlugins: require('./addBabelPlugins'),
+  addProxy: require('./addProxy'),
 };
