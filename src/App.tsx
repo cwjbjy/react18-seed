@@ -1,6 +1,5 @@
 import { Button, Popover } from "antd";
 import styles from "./index.module.less";
-import { cube } from "./math.js";
 import {isNaN,isNull,join} from 'lodash'
 import './getData'
 
@@ -15,7 +14,7 @@ const App = () => {
   console.log(isNaN(NaN));
   console.log(isNull(NaN));
   console.log(join(['a', 'b', 'c'], '~'));
-  
+  console.log(process.env.REACT_APP_IMG_URL )
   return (
     <Popover
       content={content}
