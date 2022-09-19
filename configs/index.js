@@ -4,4 +4,6 @@ module.exports = {
   __DEV__,
   addAlias: require('./addAlias'),
   addLessConfig: require('./addLessConfig'),
+  addCustomize:require('./addCustomize'),
+  addWebpackPlugins: require('./addWebpackPlugins'),
 };

@@ -1,5 +1,6 @@
-import { Button, Popover } from 'antd';
-import styles from './index.module.less'
+import { Button, Popover } from "antd";
+import styles from "./index.module.less";
+import { cube } from "./math.js";
 
 const content = (
   <div>
@@ -8,10 +9,18 @@ const content = (
   </div>
 );
 
-const App = () => (
-  <Popover content={content} title="Title" overlayClassName={styles.judicialPopoverWrapper} trigger="click">
-    <Button type="primary">Hover me</Button>
-  </Popover>
-);
+const App = () => {
+  console.log(cube(5));
+  return (
+    <Popover
+      content={content}
+      title="Title"
+      overlayClassName={styles.judicialPopoverWrapper}
+      trigger="click"
+    >
+      <Button type="primary">Hover me</Button>
+    </Popover>
+  );
+};
 
 export default App;
