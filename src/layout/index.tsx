@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import PrivareRoute from "../routes/privareRoute";
 
@@ -18,9 +19,11 @@ function Layout() {
           <Link to="/protected">Protected Page</Link>
         </li>
       </ul>
-      <PrivareRoute>
-        <Outlet />
-      </PrivareRoute>
+      <Suspense fallback={<div>Loading...</div>}>
+        <PrivareRoute>
+          <Outlet />
+        </PrivareRoute>
+      </Suspense>
     </div>
   );
 }
