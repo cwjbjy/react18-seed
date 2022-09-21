@@ -18,6 +18,9 @@ function Layout() {
         <li>
           <Link to="/protected">Protected Page</Link>
         </li>
+        <li>
+          <Link to="/exclusive">exclusive Page</Link>
+        </li>
       </ul>
       <Suspense fallback={<div>Loading...</div>}>
         <PrivareRoute>

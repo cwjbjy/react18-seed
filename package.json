@@ -23,6 +23,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
+    "start:vip": "react-app-rewired start --vip",
     "build": "react-app-rewired build --analyze",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"

@@ -1,5 +1,5 @@
 function NotFound() {
-    return <h3>Protected</h3>;
+    return <h3>404</h3>;
   }
   
   export default NotFound;

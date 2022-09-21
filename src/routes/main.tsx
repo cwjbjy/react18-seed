@@ -1,5 +1,6 @@
 import { useRoutes } from "react-router-dom";
-import route from "./route";
+//@ts-ignore
+import route from "./route-APP_TARGET";
 
 function Main() {
   const element = useRoutes(route);
