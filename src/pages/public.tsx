@@ -1,11 +1,14 @@
+import { useRequest } from 'ahooks';
 import { useAppDispatch, useAppSelector } from "@/store/hook";
 import { increment, decrement, fetchUserInfo } from "@/store/counter";
+import { getData } from '@/api/token.js';
 
 function PublicPage() {
   const {
     counter: { count, address },
   } = useAppSelector((state) => state);
   const dispatch = useAppDispatch();
+  useRequest(getData);
   return (
     <div>
       {count}
